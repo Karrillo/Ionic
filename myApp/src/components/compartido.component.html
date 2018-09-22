@@ -1,0 +1,9 @@
+<ion-list>
+    <button (click)="listaSeleccionada(lista)" ion-item *ngFor="let lista of _myAppService.listas | filtroCompletado: terminada">
+          {{ lista.titulo }}
+
+          <ion-note item-end>
+              {{lista.items.length}} items
+          </ion-note>
+        </button>
+</ion-list>
